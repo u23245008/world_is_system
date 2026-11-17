@@ -1,67 +1,12 @@
-"""Traditional speech denoising; each output depends only on its noisy WAV input."""
+"""Denoise WAV files with classical raw3 signal processing."""
 
 import argparse
 from pathlib import Path
 
 import numpy as np
 import soundfile as sf
-from scipy import signal
-from scipy.ndimage import uniform_filter1d
 
-
-NOISE_FRACTION = 0.10
-NOISE_SCALE = 1.23
-DD_SMOOTHING = 0.91
-GAIN_FLOOR = 0.10
-HIGHPASS_HZ = 122
-HIGHPASS_MIX = 0.63
-N_FFT = 1536
-
-
-def denoise_channel(noisy, sample_rate):
-    x = np.asarray(noisy, dtype=np.float64)
-    if len(x) < 32 or not np.any(x):
-        return x.copy()
-
-    n_fft = min(N_FFT, len(x))
-    hop = max(1, n_fft // 4)
-    if HIGHPASS_HZ < sample_rate / 2:
-        sos = signal.butter(3, HIGHPASS_HZ, "highpass", fs=sample_rate, output="sos")
-        filtered = signal.sosfiltfilt(sos, x)
-        x = (1 - HIGHPASS_MIX) * x + HIGHPASS_MIX * filtered
-
-    _, times, spectrum = signal.stft(
-        x, fs=sample_rate, window="hann", nperseg=n_fft,
-        noverlap=n_fft - hop, boundary="zeros")
-    power = np.abs(spectrum) ** 2
-    centers = np.rint(times * sample_rate).astype(int)
-    complete = np.flatnonzero(
-        (centers >= n_fft // 2) & (centers + n_fft // 2 <= len(x)))
-    if not len(complete):
-        complete = np.arange(power.shape[1])
-    frame_energy = power[:, complete].mean(axis=0)
-    count = max(1, int(np.ceil(NOISE_FRACTION * len(complete))))
-    selected = complete[np.argsort(frame_energy)[:count]]
-    noise_power = uniform_filter1d(power[:, selected].mean(axis=1), size=3)
-    noise_power = np.maximum(noise_power * NOISE_SCALE, 1e-12)
-
-    posterior = power / noise_power[:, None]
-    gain = np.empty_like(power)
-    previous_clean_power = np.zeros_like(noise_power)
-    for frame in range(power.shape[1]):
-        instantaneous = np.maximum(posterior[:, frame] - 1, 0)
-        prior = instantaneous if frame == 0 else (
-            DD_SMOOTHING * previous_clean_power / noise_power
-            + (1 - DD_SMOOTHING) * instantaneous)
-        gain[:, frame] = np.clip(prior / (1 + prior), GAIN_FLOOR, 1)
-        previous_clean_power = gain[:, frame] ** 2 * power[:, frame]
-
-    gain = uniform_filter1d(gain, size=3, axis=0)
-    gain = uniform_filter1d(gain, size=3, axis=1)
-    _, enhanced = signal.istft(
-        spectrum * gain, fs=sample_rate, window="hann",
-        nperseg=n_fft, noverlap=n_fft - hop, boundary=True)
-    return np.clip(enhanced[:len(noisy)], -1, 1)
+from raw3_dsp.processing import denoise_channel
 
 
 def process_file(source, destination):

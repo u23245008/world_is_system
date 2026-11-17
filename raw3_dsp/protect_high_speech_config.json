@@ -1,0 +1,6 @@
+{
+  "method": "speech",
+  "guide": "mixed",
+  "threshold": 11.0,
+  "blend": 0.75
+}

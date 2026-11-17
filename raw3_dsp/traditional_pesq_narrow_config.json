@@ -1,0 +1,10 @@
+{
+  "form": "eq",
+  "center": 445.0,
+  "width": 0.34,
+  "boost": 17.0,
+  "gate": 0.0,
+  "match_rms": true,
+  "level_db": -2.75,
+  "treble": 4.0
+}
