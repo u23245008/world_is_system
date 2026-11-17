@@ -1,0 +1,19 @@
+{
+  "normalization": "CRLF converted to LF before hashing",
+  "files": {
+    "adaptive_bass.py": "5d5676374d71bb6c3d0fb628c8541b014843619889df0ce1f54e77726a671f74",
+    "coefficient_filter.py": "98aa1772a11e765348536e59272ed36a2aae4a16a49ced31ca980088329b66c9",
+    "denoise.py": "e82c5fd4fd73ea85ede20ed32885ed844051c8907478d3a94230ac87d9b17070",
+    "evaluate.py": "5dca3ee4178b7c78565fcef563e2e56a4d6ebb93b67b9ca7440b2b6f2b5d71a4",
+    "harmonic.py": "fc5be09817cfbcc4e52ea48b256bad3cc36e1fb740ec334459fa3de54e05180f",
+    "omlsa.py": "2231776c35ebd408426183dc716cf3e61644a43553bf30338860b7ce4492de63",
+    "pause_filter.py": "9b14183aae34e8ac845cff46f2755e0615dec001c7755a8872c73b435619bb4f",
+    "phase_restore.py": "eaae94d49c5a2aa25efbfc8d0f4b97edda85989e48a3453bc1e43012e6c37f4e",
+    "pitch.py": "43fa71161db740aec2f26b6c3ffec841a96596a8505f4260d8651e777ae5bb6b",
+    "spectral_balance.py": "cfda76f4312308c8f57ae692b92209e90e3f90424c9b0d4ff5a78c47c96a3d51",
+    "spp.py": "1d7a27f1d7b1334307fad8cf89ed8983f33eec7d70382a6d6b1004ae167757c0",
+    "tonal_cancel.py": "6c91577528ffef5b4d5f03ebf64faac6d46bd8e299dbef09adea7da2dd3eb424",
+    "verify_io.py": "35370a4d3097723e9f1104b544d76332235646f88d510646fb9526a8ee23329f",
+    "voice_balance.py": "92dd1a92b5756460c17aba977f5ee54e36e36ecbf63134c65d9e131ecbd24929"
+  }
+}

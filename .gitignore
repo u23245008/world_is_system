@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Challenge runtime data and generated audio
+input/
+output/
+output_gentle/
+train/
+validation/

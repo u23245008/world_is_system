@@ -1,0 +1,82 @@
+{
+  "fixed_baseline": "gentle",
+  "fixed_baseline_changed": false,
+  "preferred_trial": "raw3",
+  "validation_files": 164,
+  "validation": {
+    "gentle": {
+      "pesq_wb": 2.3778056088017254,
+      "snr_db": 11.720342965781347,
+      "stoi": 0.9003337684342425
+    },
+    "flat40": {
+      "pesq_wb": 2.4019733950859163,
+      "snr_db": 11.183435370180414,
+      "stoi": 0.900143418039145
+    },
+    "voice40": {
+      "pesq_wb": 2.40622732624775,
+      "snr_db": 11.048778756461042,
+      "stoi": 0.9001173309266897
+    },
+    "phase40": {
+      "pesq_wb": 2.412174401486792,
+      "snr_db": 10.377396359005841,
+      "stoi": 0.8974762144061654
+    },
+    "raw2": {
+      "pesq_wb": 2.4186750061628297,
+      "snr_db": 10.642942793789615,
+      "stoi": 0.899594136734772
+    },
+    "raw3": {
+      "pesq_wb": 2.435399104909199,
+      "snr_db": 10.108922167263271,
+      "stoi": 0.8991150169202755
+    }
+  },
+  "additional_train96": {
+    "gentle": {
+      "pesq_wb": 2.2235445144275823,
+      "snr_db": 10.292038851193388,
+      "stoi": 0.8642366294707061
+    },
+    "flat40": {
+      "pesq_wb": 2.2496470026671886,
+      "snr_db": 9.81929500695102,
+      "stoi": 0.8639731629168268
+    },
+    "voice40": {
+      "pesq_wb": 2.2542915667096772,
+      "snr_db": 9.700775676858273,
+      "stoi": 0.8639546038759055
+    },
+    "phase40": {
+      "pesq_wb": 2.264630723744631,
+      "snr_db": 9.159206074725589,
+      "stoi": 0.8616448553970283
+    },
+    "raw2": {
+      "pesq_wb": 2.269242619474729,
+      "snr_db": 9.340251472628937,
+      "stoi": 0.8634565382093661
+    },
+    "raw3": {
+      "pesq_wb": 2.2904336787760258,
+      "snr_db": 8.8717909807793,
+      "stoi": 0.8629905136395406
+    }
+  },
+  "user_listening": {
+    "preferred": "raw3",
+    "comparison": "voice40",
+    "sample": "speaker015_utt01_seg0002",
+    "scope": "one comparison clip; not all files"
+  },
+  "publication": {
+    "branch": "feature/raw3-pesq-2.4354",
+    "default_method": "raw3",
+    "base_commit": "eb76bb30a705d468b7ace8e86272e5c817a1145a",
+    "local_fixed_gentle_changed": false
+  }
+}

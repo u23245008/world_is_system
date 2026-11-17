@@ -1,0 +1,61 @@
+[
+  {
+    "file": "44100.WAV",
+    "sample_rate": 44100,
+    "channels": 1,
+    "frames": 44100,
+    "passed": true
+  },
+  {
+    "file": "mono.WAV",
+    "sample_rate": 16000,
+    "channels": 1,
+    "frames": 48000,
+    "passed": true
+  },
+  {
+    "file": "short.WAV",
+    "sample_rate": 16000,
+    "channels": 1,
+    "frames": 800,
+    "passed": true
+  },
+  {
+    "file": "silent.WAV",
+    "sample_rate": 16000,
+    "channels": 1,
+    "frames": 48000,
+    "passed": true
+  },
+  {
+    "file": "speaker015_utt01_seg0002_noisy.wav",
+    "sample_rate": 16000,
+    "channels": 1,
+    "frames": 48000,
+    "passed": true,
+    "matches_evaluated_raw3": true
+  },
+  {
+    "file": "speaker015_utt01_seg0003_noisy.wav",
+    "sample_rate": 16000,
+    "channels": 1,
+    "frames": 48000,
+    "passed": true,
+    "matches_evaluated_raw3": true
+  },
+  {
+    "file": "speaker015_utt01_seg0008_noisy.wav",
+    "sample_rate": 16000,
+    "channels": 1,
+    "frames": 48000,
+    "passed": true,
+    "matches_evaluated_raw3": true
+  },
+  {
+    "file": "stereo.WAV",
+    "sample_rate": 16000,
+    "channels": 2,
+    "frames": 48000,
+    "passed": true
+  }
+]

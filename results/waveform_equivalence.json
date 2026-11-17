@@ -1,0 +1,77 @@
+[
+  {
+    "file": "speaker015_utt01_seg0002_noisy.wav",
+    "method": "flat40",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0002_noisy.wav",
+    "method": "voice40",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0002_noisy.wav",
+    "method": "phase40",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0002_noisy.wav",
+    "method": "raw2",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0002_noisy.wav",
+    "method": "raw3",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0003_noisy.wav",
+    "method": "flat40",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0003_noisy.wav",
+    "method": "voice40",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0003_noisy.wav",
+    "method": "phase40",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0003_noisy.wav",
+    "method": "raw2",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0003_noisy.wav",
+    "method": "raw3",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0008_noisy.wav",
+    "method": "flat40",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0008_noisy.wav",
+    "method": "voice40",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0008_noisy.wav",
+    "method": "phase40",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0008_noisy.wav",
+    "method": "raw2",
+    "identical_saved_samples": true
+  },
+  {
+    "file": "speaker015_utt01_seg0008_noisy.wav",
+    "method": "raw3",
+    "identical_saved_samples": true
+  }
+]
